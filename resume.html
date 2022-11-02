@@ -1,0 +1,2866 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <title>MD Shadiqur Rahman(Programmer)</title><meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- Bootstrap CSS -->
+<!-- <link rel="stylesheet" href="/../css/bootstrap.min.css"> -->
+ 
+
+
+<style type="text/css">
+.google-auto-placed
+{
+	display:none;
+}
+</style>
+<!-- Corona Educational Cube -->
+<!--<script src="https://cdn.jsdelivr.net/gh/unib0ts/unibots@latest/crnW1/script.js"></script>-->
+
+
+    <link rel="stylesheet" href="/../css/bootstrap.min.css">
+	
+    
+    	<link rel="stylesheet" href="/../css/style_LC.css">
+    
+    <link rel="stylesheet" type="text/css" href="/../fonts/web-icon.css">
+
+      
+
+    <link rel="stylesheet" href="/../css/responsive.css">
+    <script src="/../js/jquery-2.0.2.js" type="text/javascript"></script>
+    <script src="/../js/new_jqyery.js" type="text/javascript"></script>
+     
+      
+
+
+<!--<link rel="stylesheet" type="text/css" href="/../fonts/web-icon.css">
+<link rel="stylesheet" href="/../css/responsive.css">
+
+
+ <script src="/../js/new_jqyery.js" type="text/javascript"></script>-->
+ <link href="/../css/jquery-confirm.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/../css/custom_alert_style.css" rel="stylesheet" type="text/css" media="screen" />
+<!-- <link rel="stylesheet" type="text/css" href="/../webfonts/webfonts.css"> -->
+<link rel="stylesheet" type="text/css" href="/../fonts/webfonts_LC.css">
+<script async src="//get.optad360.io/sf/6f3c3040-7f6b-4d2b-bb53-9d97584c3b31/plugin.min.js"></script>
+
+	<script>
+        $('.dropdown.notification-icon .dropdown-menu').on({"click":function(e){
+                e.stopPropagation();
+            }
+        });
+
+        $('.notification-icon .dropdown-menu .unot-wrap .nlst, .notification-icon .dropdown-menu .unot-wrap .unlstb .unvall .vabtn').on('click', function () {
+            $('.dropdown.notification-icon').removeClass('open');
+        });
+
+        $('.dropdown.message-icon .dropdown-menu').on({"click":function(e){
+                e.stopPropagation();
+            }
+        });
+
+        $('.message-icon .dropdown-menu .mesnot-wrap .melst .mescont .topact a, .message-icon .dropdown-menu .mesnot-wrap .melst .mescont .botmact .bvactbtn, .message-icon .dropdown-menu .mesnot-wrap .melstb .mesvall .vabtn').on('click', function () {
+            $('.dropdown.message-icon').removeClass('open');
+        });
+        
+    </script>
+<style>
+
+.modal {
+ 
+  padding: 0!important;
+  overflow-y: auto;
+}
+
+
+</style>
+<script type="text/javascript">
+function ReadCookie(cookieName) {
+	var theCookie = " " + document.cookie;
+	var ind = theCookie.indexOf(" " + cookieName + "=");
+	if (ind == -1) ind = theCookie.indexOf(";" + cookieName + "=");
+	if (ind == -1 || cookieName == "") return "";
+	var ind1 = theCookie.indexOf(";", ind + 1);
+	if (ind1 == -1) ind1 = theCookie.length;
+	return unescape(theCookie.substring(ind + cookieName.length + 2, ind1));
+}
+function update_file()
+{
+	var file_cookie=ReadCookie("FileDate");
+	var cv_cookie=ReadCookie("TodaysDate");
+	var file=document.getElementById("file");
+	
+	if (file_cookie.indexOf('+')>0)
+	{
+		file_cookie=file_cookie.replace('+',' ');
+		file_cookie=file_cookie.replace('+',' ');
+	}
+	
+	var file_date=new Date(file_cookie);
+	var cv_date=new Date(cv_cookie);
+
+	if (cv_date>file_date)
+	{  
+		$('#F_U_message').html("This section has been updated successfully.<br />To increase your chance of getting a perfect job,  <br />make sure other sections and uploaded resume are updated too.</p>");
+	   $('#myModal').modal('show');
+	   $('#myModal').css("left", "40%");
+	  
+     $('#myModal').css("top", "30%");
+	   $(file).attr("title","Make sure your uploaded resume is updated.");
+		$(file).tooltip('show');
+		
+	}
+	else
+	{
+		$('#F_U_message').html("This section has been updated successfully.<br> To increase your chance of getting a perfect job,<br> make sure other sections are also updated and upload an updated resume.");
+		$('#myModal').modal('show');
+	   $('#myModal').css("left", "40%");
+	  
+     $('#myModal').css("top", "30%");
+	  $(file).attr("title","Upload your updated resume.");
+		$(file).tooltip('show');
+		javascript:parent.jQuery.fancybox({afterClose:parent.location.reload(true)});
+	}
+}
+</script>
+
+
+
+<!-- <script type="text/javascript" src="https://mybdjobs.bdjobs.com/js/leftnavi.js"></script>
+<script>
+   $(document).ready(function () {
+      //Expand Menu Section
+      expandLastVisitedMenuSection("");
+   });
+</script> -->
+
+<script type="text/javascript">
+
+	$(document).on('click','.promo-top .btn.close', function(e){
+		e.preventDefault();
+		$('.promo-top').slideUp();
+		$('.promo-minimized').removeClass('hidden');
+		setAssessmentCookie('MyAssessmentTopbanner',0);
+	});
+
+	$(document).ready(function(){ 
+		if (screen.width < 768) {
+			$('.promo-top').addClass('hidden');
+		}
+		else {
+			setTimeout(function(){
+				$('.promo-top').slideDown().removeClass('hidden');
+			}, 500);
+		}
+	});
+
+	
+	$(document).on('click','.promo-minimized a', function(e){
+		e.preventDefault();
+		$('.promo-top').slideDown().removeClass('inactive');
+		
+		
+		$('.promo-minimized').addClass('hidden').removeClass('active');
+		setAssessmentCookie('MyAssessmentTopbanner',1);
+	});
+
+	
+	function checkAssessmentCookie(cookieName,show) {
+
+		//console.log(user);
+		if (show == 0) {
+			//alert("Welcome again " + user);
+			setAssessmentCookie(cookieName,1);
+		} else {
+			
+			delete_cookie(cookieName);
+		}
+	}
+	
+	
+	function delete_cookie(name) {
+		document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	}
+	
+	function setAssessmentCookie(cname, cvalue) {
+		console.log("y");
+		var d = new Date();
+		exdays=1;
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + "; "+ expires ;
+
+	}
+	
+</script>
+
+
+<link rel="stylesheet" href="/../css/resumedashboard.css">
+
+<!-- BOOSTRAP JQUERY SCRIPT -->
+<!--- CUSTOM JQUERY SCRIPTS -->
+
+<script>
+  	$(function(){
+	  	$(document).on( 'scroll', function(){
+		  	if ($(window).scrollTop() > 100) {
+			  $('.scroll-top-wrapper').addClass('show');
+		  	} else {
+			  $('.scroll-top-wrapper').removeClass('show');
+		  	}
+	  	});
+  	});
+</script>
+
+<!-- GO TO TOP-->
+<script>
+  	$(function(){
+	  	$(document).on( 'scroll', function(){
+		  	if ($(window).scrollTop() > 100) {
+			  	$('.scroll-top-wrapper').addClass('show');
+		  	} else {
+				$('.scroll-top-wrapper').removeClass('show');
+		  	}
+	  	});
+   
+	  	$('.scroll-top-wrapper').on('click', scrollToTop);
+  	});
+   
+  	function scrollToTop() {
+		verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+		element = $('body');
+		offset = element.offset();
+		offsetTop = offset.top;
+		$('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+  	}
+</script>
+
+<style type="text/css">
+.BDJApplicantsName
+	{	
+		background:#ffffff;
+		font-size:18px;
+        font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:bold;
+		color:#333399;
+		padding-left:7px;
+		/* padding-top:16px; */
+		padding-bottom:3.5px;
+	}	
+	.BDJHeadline01
+	{	
+		background:#E6E6E6;
+		font-size:12px;
+		font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:bold;
+		padding-left:2px;
+		padding-top:2px;
+		padding-bottom:2px;
+		width:750px;
+	}
+	.BDJBoldText01
+	{	
+		background:#FFFFFF;
+		font-size:11px;
+		font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:bold;
+		padding-left:2px;
+		padding-top:2px;
+		padding-bottom:2px;
+	}	
+	.BDJNormalText01
+	{	
+		background:#FFFFFF;
+		font-size:11px;
+		font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:normal;
+		padding-left:2px;
+		padding-top:7px;
+		padding-bottom:10px;
+	}		
+	.BDJNormalText02
+	{	
+		background:#FFFFFF;
+		font-size:11px;
+		font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:normal;
+		padding-left:2px;
+		padding-top:2px;
+		padding-bottom:2px;
+	}			
+	.BDJNormalText03
+	{	
+		background:#FFFFFF;
+		font-size:11px;
+		font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:normal;
+		padding-left:7px;
+		padding-top:2px;
+		padding-bottom:2px;
+	}
+	.BDJNormalText04
+	{	
+		background:#FFFFFF;
+		font-size:11px;
+        font-family:Verdana, Geneva, sans-serif;
+
+		font-weight:normal;
+		padding-left:7px;
+		padding-top:2px;
+		padding-bottom:2px;
+		word-break: break-word;
+	}
+	.BDJCopyRight
+	{	
+		background:#FFFFFF;
+        font-family:Verdana, Geneva, sans-serif;
+
+		font-size:9px;
+		font-weight:normal;
+		padding-left:7px;
+		padding-top:2px;
+		padding-bottom:2px;
+		color:#000066;
+	}
+    BDj_word
+    {
+      	background-image:url(images\word.gif);
+    }
+    #resume
+   	{
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:11px; 
+  	}
+	em{
+		font-style: normal;/* / Removes italics /*/
+		text-decoration: underline; /*/ Makes underline /*/
+	}
+
+	.view-cv-wrapper .download-list .title 
+		{
+			float: left;
+			line-height: 24px;
+			font-size: 16px;
+			margin: 0 7px 0 0;
+			color: #333;
+			padding-left: 0;
+			font-weight: 600;
+		}
+
+		.BDJNormalText05 {
+            background: #FFFFFF;
+            font-size: 11px;
+            font-family: Verdana, Geneva, sans-serif;
+            font-weight: normal;
+            padding-left: 2px;
+            padding-top: 2px;
+            padding-bottom: 10px;
+        }
+        
+        .BDJNormalText06 {
+            background: #FFFFFF;
+            font-size: 11px;
+            font-family: Verdana, Geneva, sans-serif;
+            font-weight: normal;
+            padding-left: 2px;
+            padding-bottom: 5px;
+        }
+</style>
+<style>
+    span[aria-hidden="true"] {
+        color: #004DB3;
+    }
+</style>
+
+
+
+
+<style>
+    .intro-popup {
+        position: absolute;
+        min-width: 300px;
+        z-index: 2;
+    }
+    
+    .intro-popup .popup-wrap {
+        display: inline-block;
+        white-space: normal;
+        background: #C0FCDC;
+        -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+        opacity: 0.9;
+        color: #000;
+        padding: 15px;
+        text-align: left;
+        cursor: auto;
+        transform: scale(0);
+        transition: 0.4s linear;
+    }
+    
+    .intro-popup .popup-wrap.in {
+        transform: scale(1);
+    }
+    
+    .intro-popup.right {
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 12px;
+    }
+    
+    .intro-popup.right .popup-wrap {
+        transform-origin: 0% 50%;
+    }
+    
+    .intro-popup.top {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 12px;
+    }
+    
+    .intro-popup.top .popup-wrap {
+        transform-origin: 50% 100%;
+    }
+    
+    .intro-popup.left {
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 12px;
+    }
+    
+    .intro-popup.left .popup-wrap {
+        transform-origin: 100% 50%;
+    }
+    
+    .intro-popup.bottom {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 12px;
+    }
+    
+    .intro-popup.bottom .popup-wrap {
+        transform-origin: 50% 0%;
+    }
+    
+    .intro-popup .popup-wrap:after {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent;
+        opacity: 0.9;
+        position: absolute;
+    }
+    
+    .intro-popup.right .popup-wrap:after {
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-right-color: #C0FCDC;
+    }
+    
+    .intro-popup.top .popup-wrap:after {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-color: #C0FCDC;
+    }
+    
+    .intro-popup.left .popup-wrap:after {
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left-color: #C0FCDC;
+    }
+    
+    .intro-popup.bottom .popup-wrap:after {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-color: #C0FCDC;
+    }
+    
+    .intro-popup .icon-close {
+        float: right;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    
+    .intro-popup .popup-content {
+        margin: 5px 20px 5px 5px;
+    }
+    
+    .intro-popup .popup-content .popup-title {
+        color: #000000;
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0px;
+    }
+    
+    .intro-popup .popup-content .text {
+        color: #000000;
+        margin-bottom: 0px;
+        font-size: 12px;
+    }
+    
+    .intro-popup .popup-content .text a {
+        color: #000000;
+        text-decoration: underline;
+    }
+</style>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.intro-popup').parent().css({
+            'position': 'relative',
+            'display': 'inline-block',
+        });
+        $('.intro-popup').each(function() {
+            var popupPlacement = $(this).attr(
+                'popup-placement');
+            if (popupPlacement == ('right' || 'Right')) {
+                $(this).addClass('right');
+            } else if (popupPlacement == ('top' || 'Top')) {
+                $(this).addClass('top');
+            } else if (popupPlacement == ('left' || 'Left')) {
+                $(this).addClass('left');
+            } else {
+                $(this).addClass('bottom');
+            }
+        });
+
+
+
+		
+
+		
+
+		if (readCookie('myBdjobsAriaExp') == "" || readCookie('myBdjobsAriaExp') == null) {
+			//alert(readCookie('myBdjobsAriaExp'+"h111"));
+			setTimeout(function() {
+				$('.popup-wrap').addClass('in');
+			}, 400);
+		}else{
+			$('.popup-wrap').removeClass('in');
+		}
+
+		//alert(readCookie('myBdjobsAriaExp')+"h222");
+
+        
+
+
+        $(document).on('click', '.intro-popup', function(e) {
+            e.stopPropagation();
+        });
+        $(document).on('click', '.intro-popup .icon-close', function(e) {
+            $(this).parents('.intro-popup').css({
+                'transform': 'scale(0)',
+                'transition': '1s linear',
+            });
+           $(this).parents('.popup-wrap').removeClass('in');
+        });
+		
+    });
+</script>
+
+<script type="text/javascript">
+
+function convert_word()
+{
+  var str_html=document.getElementById("resume").innerHTML;
+  document.getElementById("str_html").value=str_html;
+  document.getElementById("form").submit();
+
+}
+
+function convert_pdf(){
+    var MainCV_= document.getElementById("resume").innerHTML;
+    var MainCV_New = "<table width='100%' border='0'><tr><td align='right'><span class='style5'>Powered By <span class='style1'>B</span><span class='style2'>d</span><span class='style3'>jobs</span>.<span class='style4'>com</span></span></td></tr></table><div id='resume'>"+MainCV_+"</div>";
+    document.getElementById("MainCV_").value = MainCV_New;
+    document.getElementById("form2").submit(); 
+}
+
+</script>
+
+	<script>
+		(function(h,e,a,t,m,p) {
+		m=e.createElement(a);m.async=!0;m.src=t;
+		p=e.getElementsByTagName(a)[0];p.parentNode.insertBefore(m,p);
+		})(window,document,'script','https://u.heatmap.it/log.js');
+	</script>
+	
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56024242-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+//
+//	  var _gaq = _gaq || [];
+//	  _gaq.push(['_setAccount', 'UA-36961160-1']);
+//	  _gaq.push(['_trackPageview']);
+//	
+//	  (function() {
+//		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+//		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+//	  })();
+//	
+	</script>
+<style>
+    a.skip-main {
+        clip:rect(1px,1px,1px,1px);
+        position:absolute!important;
+        height:1px;
+        width:1px;
+        overflow:hidden;
+        outline: auto!important;
+        color: #165273;
+        background-color:#f1f1f1;
+    }
+    
+    a.skip-main:focus,
+    a.skip-main:active { 
+        background-color:#f1f1f1;
+        border-radius:3px;
+        box-shadow:0 0 2px 2px rgba(0,0,0,.6);
+        clip:auto!important;
+        color:#165273;
+        display:block;
+        font-size:14px;
+        font-weight:700;
+        height:auto;
+        left:5px;
+        line-height:normal;
+        padding:15px 23px 14px;
+        text-decoration:none;
+        top:5px;
+        width:auto;
+        z-index:100000;
+    }
+    .BDJS {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+</style>
+
+
+<script>
+    $(document).ready(function() {
+        $('a[href*="#"]')
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                    location.hostname == this.hostname
+                ) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { 
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); 
+                                $target.focus(); 
+                            };
+                        });
+                    }
+                }
+            });
+    });
+</script>
+
+
+
+<script>
+    function AccessibilityAffectedElementsRedefine(){
+        //$affectedElements = $("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr");
+        $affectedElements = $("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr,label,table,thead,tbody,th,tr,td,select,option,abbr");
+        
+        $affectedElements.each(function() {
+            $(this).data("orig-size", $(this).css("font-size"));
+        });
+        
+        console.log("$affectedElements");
+        console.log($affectedElements);
+        $affectedElements.each(function() {
+            $(this).css("font-size", $(this).data("orig-size"));
+        });
+
+        $affectedElements.each(function() {
+            $(this).css("font-size", parseInt($(this).css("font-size")) + $acccessibilityClick);
+        });  
+    }
+
+    function isBigCursorBtnClicked(){
+        if($("div.larrw-wrap #f-larrw").hasClass("bcursor")){
+            return true
+        }else{
+            return false;
+        }
+    }
+
+    function reGenarateBigCursor_Old(){
+        $bigaffectedElements = $("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr,label,table,thead,tbody,th,tr,td,select,option,abbr");
+        if($("div.larrw-wrap #f-larrw").hasClass("bcursor")){
+            console.log("bcursor_1");
+            // if(!$("td *").hasClass("bcursor")){
+            //     console.log("bcursor_2");
+            //     $("html *").removeClass('bcursor').addClass('bcursor');
+            // }
+            $bigaffectedElements.each(function() {
+                console.log("bcursor_2");
+                if(!$(this).hasClass("bcursor")){
+                    console.log("bcursor_3");
+                    $(this).addClass("bcursor");
+                }
+            });  
+
+        }
+    }
+
+    function reGenarateBigCursorV1(affectedElements,isBigCursorClicked,isObjAffectedElement){
+        let $bigAff = "" ;
+        if(isObjAffectedElement){
+            $bigAff = affectedElements;
+        }else{
+            $bigAff = $(affectedElements) ; 
+        }
+        
+        if(isBigCursorClicked){
+            console.log("bcursor_1");
+            $bigAff.each(function() {
+                console.log("bcursor_2");
+                if(!$(this).hasClass("bcursor")){
+                    console.log("bcursor_3");
+                    $(this).addClass("bcursor");
+                }
+            });
+        }    
+    }
+
+    function reGenarateBigCursor(isBigCursorClicked){
+        if(isBigCursorClicked){
+            $("html *").removeClass('bcursor').addClass('bcursor');
+        }    
+    }
+
+    function reGenerateHighlitedLink(){
+        if($("#f-linkh").hasClass("linkHighliedCls")){
+            $("a").addClass("lnk-highlited");
+            $("button").addClass("lnk-highlited");
+            $('input[type="submit"],input[type="button"]').addClass("lnk-highlited");
+        }
+    }
+
+    function reGenerateHeadingHighlited(){
+        if($("#f-sheadns").hasClass("headingshighlitedCls")){
+            var $affectedElementsmms = $("h1, h2, h3, h4, h5, h6, [role=heading]");
+            $affectedElementsmms.each(function () {
+                $(this).addClass("headings-highlited");
+            });
+        }
+    }
+</script>
+
+<!-- <script>
+    $(document).ready(function() {
+        setInterval(function() {
+            console.log("bcursor");
+            $bigaffectedElements = $("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr,label,table,thead,tbody,th,tr,td,select,option,abbr");
+            if($("div.larrw-wrap #f-larrw").hasClass("bcursor")){
+                console.log("bcursor_1");
+                // if(!$("td *").hasClass("bcursor")){
+                //     console.log("bcursor_2");
+                //     $("html *").removeClass('bcursor').addClass('bcursor');
+                // }
+
+                $bigaffectedElements.each(function() {
+                    console.log("bcursor_2");
+                    if(!$(this).hasClass("bcursor")){
+                        console.log("bcursor_3");
+                        $(this).addClass("bcursor");
+                    }
+                });  
+
+            }
+        }, 1000);
+    });
+</script> -->
+
+
+</head>
+
+<body>
+	
+
+    <script>
+        var $affectedElements = ""; //$("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr,label,th,td");
+        var $acccessibilityClick = 0;
+        $(document).ready(function() {
+            $("#accAdjustmentsTools").removeClass('hide');
+            $(document).click(function () {
+                if($(".control-panel").hasClass("open")){
+                    $(".control-panel").removeClass("open").removeAttr("tabindex");
+                    $(".control-panel").find(".btn").removeAttr("tabindex").removeAttr("role").removeAttr("aria-pressed");
+                    $(".control-panel").find(".acctoggle-btn").removeAttr("tabindex").removeAttr("role").removeAttr("aria-pressed");
+                }
+            });
+
+            $(document).on("click", ".control-panel,.acad", function (e) {
+                e.stopPropagation();                
+            });
+
+            $(".acad").on("click", function() {
+                $(".acctoggle-btn").trigger("click");
+                $(".control-panel").focus();
+            });
+
+            $(".acctoggle-btn").on("click", function() {
+                if($(".control-panel").hasClass("open")){
+                    $(".control-panel").removeClass("open").removeAttr("tabindex");
+                    $(".control-panel").find(".btn").removeAttr("tabindex").removeAttr("role").removeAttr("aria-pressed");
+                    $(".control-panel").find(".acctoggle-btn").removeAttr("tabindex").removeAttr("role").removeAttr("aria-pressed");
+                }else{
+                    $(".control-panel").addClass("open").attr("tabindex","0");
+                    $(".control-panel").find(".btn").attr("tabindex","0").attr("role","button").attr("aria-pressed","false");
+                    $(".control-panel").find(".acctoggle-btn").attr("tabindex","0").attr("role","button").attr("aria-pressed","false");
+                    isOffLayer=false;
+                }
+            });
+            
+            $(document).on("keypress",".control-panel div[role=button]",function(e){
+                if (e.key === "Enter") {                    
+                    $(this).trigger("click");
+                }
+            });
+
+            $(document).on("click",".control-panel div[role=button]",function(e){
+                $(this).toggleAriaPressed();
+            });
+
+            console.log($affectedElements);
+            //$affectedElements = $("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr,label,th,td");
+            $affectedElements = $("h1,h2,h3,h4,h5,h6,ul,ol,input,div,p,a,button,span,li,strong,b,i,hr,label,table,thead,tbody,th,tr,td,select,option,abbr");
+            console.log($affectedElements);
+            
+            $affectedElements.each(function() {
+                $(this).data("orig-size", $(this).css("font-size"));
+            });
+
+
+            $(document).on("click", "#btn-increase", function() {
+                console.log($affectedElements)
+                changeFontSize(1); 
+            });
+
+
+            
+            $(document).on("click", "#btn-decrease", function() {
+                console.log($affectedElements)
+                changeFontSize(-1);
+            })
+
+            $(document).on("click", "#btn-orig", function() {            
+                $acccessibilityClick = 0;
+                $affectedElements.each(function() {
+                    $(this).css("font-size", $(this).data("orig-size"));
+                });
+            })
+
+            function changeFontSize(direction) {
+                $acccessibilityClick = $acccessibilityClick + direction;
+                $affectedElements.each(function() {
+                    $(this).css("font-size", parseInt($(this).css("font-size")) + direction);
+                });
+            }          
+
+            $(document).on("click", "#f-monocclr", function() {
+                $("html").toggleClass("monocclr");
+            });
+
+            $(document).on("click", "#f-invertclr", function() {
+                $("html").toggleClass("invertclr");
+            });
+
+            // $(document).on("click", "#f-larrw", function() {
+            //     $("html *").toggleClass("bcursor");
+            // });
+
+            $(document).on("click", "#f-larrw", function() {
+                $("html").toggleClass("bcursor");
+            });
+
+            var isBCursorOn=false;
+            $(document).on("click", "#f-larrw", function() {                
+                isBCursorOn=(isBCursorOn?false:true);
+            });
+            
+            $("html *").on("mouseover",function(){
+                if(isBCursorOn){
+                    $(this).addClass("bcursor");
+                }else{
+                    $(this).removeClass("bcursor");
+                }
+            });
+
+            $(document).on("click","#f-linkh",function() {
+				$("a").toggleClass("lnk-highlited");
+                $("button").toggleClass("lnk-highlited");
+                $('input[type="submit"],input[type="button"]').toggleClass("lnk-highlited");
+                $(this).toggleClass("linkHighliedCls");				
+            });
+
+            
+            var $affectedElementsmm = $("h1, h2, h3, h4, h5, h6, [role=heading]");
+			$(document).on("click","#f-sheadns",function() {
+				$affectedElementsmm.each(function () {
+					$(this).toggleClass("headings-highlited");
+				});
+                $(this).toggleClass("headingshighlitedCls");
+            });
+            
+            $(document).on("click", "#f-readgde", function() {
+                console.log('Reading Guide');
+                $(".rguide").toggleClass("shd");
+                $(document).on('mousemove', function(e){
+                    $('.rguide').css('top', e.pageY-15);
+                });
+            });
+
+            $.fn.toggleAriaPressed=function(){
+                if($(this).attr("aria-pressed")=="true"){
+                    $(this).attr("aria-pressed","false");
+                }else{
+                    $(this).attr("aria-pressed","true");
+                }
+            }
+
+        });
+    </script>
+
+    <style>
+        .control-panel {
+            width: 210px;
+            position: fixed;
+            top: 30%;
+            left: 100%;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(0%);
+            z-index: 9999;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        
+        .control-panel.open {
+            transform: translateX(-100%);
+        }
+        
+        .control-panel .panel-header {
+            background-color: #444;
+            display: flex;
+            align-items: center;
+        }
+
+        .control-panel .panel-header .acctoggle-btn {
+            background-color: #444;
+            border-radius: 5px 0px 0px 5px;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            margin-left: -36px;
+            text-align: center;
+            padding: 8px;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .control-panel .panel-header .acctoggle-btn img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .control-panel .panel-header .name {
+            color: #fff;
+            margin: 0px auto;
+            padding: 0px;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        
+        .control-panel .panel-header .name .picn {
+            margin-right: 10px;
+        }
+        
+        .control-panel .box-wrap {
+            background-color: #444;
+            padding: 10px;
+        }
+        
+        .control-panel .box-wrap .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: left;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-color: #efefef;
+            border: 1px solid transparent;
+            padding: 2px 5px;
+            font-size: 14px;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .control-panel .box-wrap .btn span {
+            margin-right: 5px;
+        }
+        
+        .control-panel .box-wrap .font-control {
+            margin-bottom: 10px;
+        }
+
+        .control-panel .box-wrap .invert-wrap, .control-panel .box-wrap .larrw-wrap, .control-panel .box-wrap .sheadings-wrap,
+        .control-panel .box-wrap .readingde-wrap, .control-panel .box-wrap .monochrome-wrap, .control-panel .box-wrap .linkh-wrap{
+            margin-bottom: 10px;
+        }       
+        .control-panel .box-wrap .invert-wrap .btn, .control-panel .box-wrap .larrw-wrap .btn, .control-panel .box-wrap .sheadings-wrap,
+        .control-panel .box-wrap .monochrome-wrap .btn, .control-panel .box-wrap .linkh-wrap .btn, .control-panel .box-wrap .scr-wrap .btn,
+        .control-panel .box-wrap .readingde-wrap .btn, .control-panel .box-wrap .sheadings-wrap .btn{
+            min-width: 190px;
+        }
+
+        .control-panel .box-wrap .scr-wrap {
+            margin-bottom: 0px;
+        }
+        
+        .control-panel .box-wrap .font-control {
+            display: block;
+        }
+        
+        .control-panel .box-wrap .font-control .btn:last-child {
+            margin-right: 0px;
+        }
+        
+        .monocclr {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+        .invertclr {
+            filter: invert(100%);
+		  -webkit-filter: invert(100%);
+		  -moz-filter: invert(100%);
+		  -ms-filter: invert(100%);
+		  -o-filter: invert(100%);
+        }
+        html.bcursor * {
+            cursor: url("https://mybdjobs.bdjobs.com/mybdjobs/images/arrow_w.svg"),auto!important;
+        }
+        .bcursor {
+            cursor: url("https://mybdjobs.bdjobs.com/mybdjobs/images/arrow_w.svg"),auto!important;
+        }
+        .lnk-highlited {
+            border: 2px solid #fbb78a;
+            background-color: #ecc200 !important;
+			color: #000000 !important;
+		}
+        .headings-highlited {
+            border: 2px solid #fbb78a;
+            background-color: #ecc200 !important;
+			color: #000000 !important;
+		}
+        .rguide {
+            box-sizing: border-box;
+            background: #000;
+            width: 99%!important;
+            min-width: 100%!important;
+            position: absolute!important;
+            height: 12px!important;
+            border: solid 3px #fff300;
+            border-radius: 5px;
+            top: 20px;
+            z-index: 10000000000;
+        }
+        .rguide.shd{
+            display: none;
+        }
+    </style>
+    <!--Accessibility Control End-->
+
+
+    	<!-- <div class="promo-top hidden ">
+            <div class="container">   
+                <div class="inner">                                                                                                		
+
+                    <a href="//mybdjobs.bdjobs.com/mybdjobs/assessment/smnt_certification_help.asp" target="_blank" onclick= "ga('send','event', 'assessmentTopBanner','click','masterview.asp',1);">
+                        <img src="https://mybdjobs.bdjobs.com/mybdjobs/images/assessment_promo_bg_1.png" alt="" />
+                    </a>
+                    <a href="javascript:checkAssessmentCookie('MyAssessmentTopbanner',0);" class="btn close">
+                        <i class="icon-times-o"></i>
+                    </a>
+                </div>
+            </div>
+		</div> -->
+
+		
+			<style type="text/css">
+    .vrestwrap.promo-top .worning-wrap {
+        display: flex;
+        align-items: center;
+    } 
+    .jf.promo-top .worning-wrap {
+        display: flex;
+        align-items: center;                
+    } 
+    .vrestwrap.promo-top .inner {
+        text-align: center;
+    }       		
+    .jf.promo-top .inner {
+        text-align: center;
+    }       		
+    .vrestwrap.promo-top .btn.close {
+		font-size: 28px;
+		position: absolute;
+		top: 32%;
+		right: 0;
+		padding: 0;
+		/* color: #757575; */
+		color: #ffffff;
+		opacity: 1;
+		text-shadow: 0 0px 0 #000000;
+		transform: translateY(-50%);
+    }
+    .jf.promo-top .btn.close {
+       font-size: 28px;
+		position: absolute;
+		top: 32%;
+		right: 0;
+		padding: 0;
+		/* color: #757575; */
+		color: #ffffff;
+		opacity: 1;
+		text-shadow: 0 0px 0 #000000;
+		transform: translateY(-50%);
+    }
+    .vrestwrap.promo-top {			
+        background-color: #F8EEF7;
+        height: auto;
+    }
+    .jf.promo-top {			
+        background-color: #462C79;
+		height: auto;
+    }
+    .vrespt.promo-top .worning-wrap {
+        display: inline-block;
+        padding-left: 110px;
+        padding-right: 120px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background-image: url('https://mybdjobs.bdjobs.com/mybdjobs/images/popup_vresbg_left.png'), url('https://mybdjobs.bdjobs.com/mybdjobs/images/popup_vresbg_right.png');
+        background-position: left top, right center;
+        background-repeat: no-repeat;
+    }
+    .jf.promo-top .worning-wrap {
+               display: inline-block;
+				padding-left: 110px;
+				padding-right: 120px;
+                		padding-top: 0px;
+				padding-bottom: 0px;
+				background-image: none;
+				/* padding-top: 13px;
+				padding-bottom: 13px;
+				background-image: url('images/leftf_bg.png'), url('images/rightf_bg.png');
+				background-position: left top, right center;
+				background-repeat: no-repeat; */
+    }
+
+
+    @media only screen and (min-width:768px) and (max-width:1199px) {			
+        .vrespt.promo-top .worning-wrap img {
+            display: block;
+        }
+        .jf.promo-top .worning-wrap img {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:767px) {			
+        .vrespt.promo-top .worning-wrap {
+            padding: 10px 0px 10px 0px;				
+            background-image: none;
+        }
+        .jf.promo-top .worning-wrap {
+            padding: 10px 0px 10px 0px;				
+            background-image: none;
+        }
+        .vrespt.promo-top .btn.close {
+            font-size: 20px;
+        }			
+        .jf.promo-top .btn.close {
+            font-size: 20px;
+        }			
+    }
+</style>
+
+		
+		
+
+
+<style>
+		::-webkit-input-placeholder { opacity: 1; -webkit-transition: opacity .5s; transition: opacity .5s; } 
+		:-moz-placeholder { opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s; }
+		::-moz-placeholder { opacity: 1; -moz-transition: opacity .5s; transition: opacity .5s; }
+		:-ms-input-placeholder { opacity: 1; -ms-transition: opacity .5s; transition: opacity .5s; }
+		::placeholder { opacity: 1; transition: opacity .5s; }
+			
+		*:focus::-webkit-input-placeholder { opacity: 0; }
+		*:focus:-moz-placeholder { opacity: 0; }
+		*:focus::-moz-placeholder { opacity: 0; }
+		*:focus:-ms-input-placeholder { opacity: 0; }
+		*:focus::placeholder { opacity: 0; }
+	</style>
+
+<script type="text/javascript">
+	
+		var isWindowActiveForAll;
+	
+
+		$(window).blur(function(){
+			isWindowActiveForAll = false;
+		});
+		$(window).focus(function(){
+		isWindowActiveForAll = true;
+		});
+	
+
+		setInterval(function () {
+			if (window.isWindowActiveForAll)
+				getNotification('mybdjobs','n','EN');
+				
+		}, 60000);
+			
+			setInterval(function () {
+			if (window.isWindowActiveForAll)
+				
+				showMessage('mybdjobs','m','EN');
+		}, 60000);
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		});	
+	
+		$(document).on("click",'.social-button .btn',function(){
+			var $this = $(this);
+			$this.button('loading');
+			setTimeout(function() {
+				$this.button('reset');
+			}, 1000);
+		});
+	</script>
+
+	<script  type="text/javascript">	
+		function getNotification(strSystemName,strType,strVersion) {
+			$.ajax({
+				
+				type: "GET",
+				
+				url: "https://mybdjobs.bdjobs.com/mybdjobs/ajax-mybdjobs-notification.asp?v="+strVersion+"&s="+strSystemName+"&t="+strType,
+				
+				contentType: "application/x-www-form-urlencoded; charset=utf-8",
+				cache: false,
+				data: {},
+				success: function (strNotificationData) {
+					if (strNotificationData != "") {
+						var strArrayData = strNotificationData.split("#");
+						var count = strArrayData[0];
+						var strHtmlNotification = strArrayData[1];
+
+						if (parseInt(count)>0)
+						{
+							if (count.length>2)
+							{
+								count=count.slice(0,2)+"+"
+							}
+							var strHtml="<span  class='nbdge'>"+count+"</span>";
+							$("#notired").empty().append(strHtml);
+							$("#notired").css('display','block');
+							if (strHtmlNotification.trim()!="")
+							{
+								
+								$("#notification").empty().append(strHtmlNotification);
+								
+							}
+							
+						}
+						else
+						{	if (strHtmlNotification.trim()!="")
+							{
+								
+								$("#notification").empty().append(strHtmlNotification);
+								
+							}
+							
+							$("#notired").empty();
+							
+						}
+					}
+					else {
+						//$(".notired").html('');
+						$("#notired").empty();
+					}
+				}
+			})
+		}
+
+
+function showMessage(strSystemName,strType,strVersion) {
+			$.ajax({
+				
+				type: "GET",
+				
+				url: "https://mybdjobs.bdjobs.com/mybdjobs/ajax-mybdjobs-notification.asp?v="+strVersion+"&s="+strSystemName+"&t="+strType,
+				
+				contentType: "application/x-www-form-urlencoded; charset=utf-8",
+				cache: false,
+				data: {},
+				success: function (strMessageData) {
+					if (strMessageData != "") {
+						var strArrayData = strMessageData.split("#");
+						var count = strArrayData[0];
+						var strHtmlMessage = strArrayData[1];
+
+						if (parseInt(count)>0)
+						{
+							if (count.length>2)
+							{
+								count=count.slice(0,2)+"+"
+							}
+							
+							var strHtml="<span  class='mnbdge'>"+count+"</span>";
+							
+							$("#motired").empty().append(strHtml);
+							$("#motired").css("display","block");
+							if (strHtmlMessage.trim()!="")
+							{
+								
+								$("#message").empty().append(strHtmlMessage);
+								
+							}
+							
+						}
+						else
+						{	if (strHtmlMessage.trim()!="")
+							{
+								
+								$("#message").empty().append(strHtmlMessage);
+								
+								
+							}
+							$("#motired").empty();
+						}
+					}
+					else {
+						
+						$("#motired").empty();
+					}
+				}
+			})
+		}
+    function showNotification() {
+			
+			$("#notired").html("");
+			$("#notired").css("display", "none");
+		}
+		function changeDate()
+		{
+			var d = new Date();
+			var strDate = d.toLocaleDateString();
+			var strTime = d.toLocaleTimeString();
+			var fullDateTime = strDate + " " + strTime;
+			SetCookieInDomain("MybdjobsJobDate", fullDateTime, 1);
+
+		}
+		function showReminderMessage() {
+			
+			
+			$("#motired").empty();
+			
+		}
+		
+		
+		
+		function SetCookie(cookieName, cookieValue, nDays) {
+			var today = new Date();
+			var expire = new Date();
+			if (nDays == null || nDays == 0) nDays = 1;
+			expire.setTime(3600000 * 24 * nDays);
+			document.cookie = cookieName + "=" + escape(cookieValue)+";path=/";
+		}
+		function SetCookieInDomain(cookieName, cookieValue, nDays) {
+			var today = new Date();
+			var expire = new Date();
+			if (nDays == null || nDays == 0) nDays = 1;
+			expire.setTime(3600000 * 24 * nDays);
+			document.cookie = cookieName + "=" + escape(cookieValue)+";domain=.bdjobs.com;secure;path=/";
+		}
+		function ReadCookie(cookieName) {
+			var theCookie = " " + document.cookie;
+			var ind = theCookie.indexOf(" " + cookieName + "=");
+			if (ind == -1) ind = theCookie.indexOf(";" + cookieName + "=");
+			if (ind == -1 || cookieName == "") return "";
+			var ind1 = theCookie.indexOf(";", ind + 1);
+			if (ind1 == -1) ind1 = theCookie.length;
+			return unescape(theCookie.substring(ind + cookieName.length + 2, ind1));
+		}
+	</script>
+	
+
+
+
+                        
+
+    <script>
+            $(function () {
+                var $vresp = $('.progress-pie-chart-cor'), percent = parseInt($vresp.data('percent')), deg = 360 * percent / 100;
+                if (percent > 50) {
+                    $vresp.addClass('gd-50');
+                }
+                $('.coresume-progress-fill').css('transform', 'rotate(' + deg + 'deg)');
+                $('.coresume-percent span').html(percent + '%');
+            });
+        </script>
+
+	
+           
+
+ 
+   		<div id="resume">	
+        	
+			
+<table border="0" cellpadding="0" cellspacing="0" align="center" width="750" >
+
+
+
+		<tr>
+		<td colspan="6">
+		<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+			<td width="73%" height="" align="left" valign="bottom" class="BDJApplicantsName">
+			<!--Applicant's Name:-->
+			MD SHADIQUR RAHMAN
+			</td>
+			
+			<td width="27%" rowspan="2" align="right" valign="bottom">
+			<!--Photograph:-->
+			
+				<table width="140" height="140" border="0" align="center" cellpadding="0" cellspacing="7" bgcolor="#dadce1">
+					<tr> 
+					<td width="126" height="135" align="center" bgcolor="#e2e4e5" valign="middle"> 
+                    
+					<img src="https://my.bdjobs.com/photos/3375001-3400000/1363399942t8p0s.jpg?var=201020229" width="124" height="135">
+					</td>
+					</tr>
+				</table>
+			
+			</td>
+			</tr>
+	
+			<tr>
+			<td class="BDJNormalText04" align="left" valign="middle">
+			<!--Contact Address:-->
+			
+				 Address: House 4, Road 12, Shekhertek, Mohammadpur Housing, Mohammadpur, Dhaka 1207 		 
+			<!--Home Phone:-->
+			
+				 <br />
+				 Primary Mobile No: 01996200797	 
+			<!--Office Phone:-->
+			
+				 <br />
+				 Secondary Mobile No :01728838644
+			<!--Mobile:-->
+			
+				 <br />		
+				 Primary Email : shadiq1297@gmail.com
+			</td>
+			</tr>
+		</table>
+		</td>
+		</tr>
+	</table>
+	
+<!---------------
+CAREER OBJECTIVE:
+----------------->
+
+     <table border="0" cellpadding="0" cellspacing="0" align="center" width="750">	
+		 <tr>
+		 <td colspan="6" style="border-bottom:1px solid #000000;">&nbsp;</td>
+		 </tr>
+		  
+		 <tr><td colspan="6">&nbsp;</td></tr>		 
+		 
+		 <tr>
+		 <td colspan="6" class="BDJHeadline01"><U>Career Objective:</U></td>
+		 </tr>
+		 
+		 <tr>
+		 <td colspan="6" align="left" style="padding-left:5px;word-break: break-word;" class="BDJNormalText01">
+		 Quality-focused and results-driven professional, seeking a position as a web application developer with SQL, PL/SQL and Oracle Application express (APEX) where I can use my experience as a web application developer to enhance the user experience.	
+		 </td>
+		 </tr>		
+	</table>
+
+<!--------------
+CAREER SUMMARY :
+---------------->
+
+<!---------------------
+SPECIAL QUALIFICATION :
+----------------------->
+	 	
+<!-------------------------------------------
+EMPLOYMENT HISTORY, TOTAL YEAR OF EXPERIENCE:
+--------------------------------------------->
+
+	 <table border="0" cellpadding="0" style="margin-top:3px;" cellspacing="0" align="center" width="750">
+	 	  <!--
+	 	  Employment History:
+	 	  -->
+		  <tr>
+		  <td colspan="6" class="BDJHeadline01"><U>Employment History:</U></td>
+		  </tr>
+		  <!--Total Year of Experience:-->
+		  
+			   <tr>
+			   <td colspan="6" align="left" style="padding-left:5px;" class="BDJNormalText01">
+			   <STRONG>Total Year of Experience :</STRONG> 2.2 yrs
+			   </td>
+			   </tr>
+			</table>
+	 	  
+				<table border="0" cellpadding="0" style="margin-top:3px; line-height: 17px;" cellspacing="0" align="center" width="750">
+                <tr>
+                    <th width="22" align="center" style="padding-left:5px;" class="BDJNormalText05" valign="top">
+						1.
+					</th>
+					  <th colspan="5" class="BDJBoldText01" width="750" valign="top" align="left">
+						<!--Position, DateFrom, DateTo:-->
+						Jr Programmer (0.7 yr)
+						<br>
+						<span class="BDJNormalText06"> (February, 2022 - Continuing)</span>
+						<br>
+					</th>
+                        
+				</tr>
+           
+
+				<tr>
+					<td class="BDJHeadline02" align="center">&nbsp;</td>
+					<td colspan="5" class="BDJNormalText06" align="left">
+						<strong>Ha-Meem Group</strong>
+						<br>
+						 
+						<span class="BDJNormalText06">Nishat Nagar, Tongi, Gazipur</span>
+						<br>
+						 
+					</td>
+				</tr>
+                
+                 
+                 <tr>
+                <td class="BDJHeadline02" align="center">&nbsp;</td>
+                    <td colspan="5" class="BDJNormalText06" align="left">
+                         <strong>Area of Expertise</strong>
+                         <br>
+						<span class="BDJNormalText06">
+                   Problem Solving (0.6 yr)
+                   </span>
+				   <br>
+				   
+                   
+							<STRONG>Duties/Responsibilities</STRONG>
+							<br />
+							Application Development, Database Administration, Oracle Forms and Reports Development, Application Express(APEX)
+
+						
+						<!-- <script>
+							$( document ).ready(function() {
+								if (readCookie('myBdjobsAriaExp') == "" || readCookie('myBdjobsAriaExp') == null) {
+									
+								}
+							});
+						</script> -->
+
+						
+						
+                    </td>
+                   </tr>
+                
+                
+			 </table>	
+			
+				<table border="0" cellpadding="0" style="margin-top:3px; line-height: 17px;" cellspacing="0" align="center" width="750">
+                <tr>
+                    <th width="22" align="center" style="padding-left:5px;" class="BDJNormalText05" valign="top">
+						2.
+					</th>
+					  <th colspan="5" class="BDJBoldText01" width="750" valign="top" align="left">
+						<!--Position, DateFrom, DateTo:-->
+						Jr Executive (1.3 yrs)
+						<br>
+						<span class="BDJNormalText06"> (November, 2018 - March, 2020)</span>
+						<br>
+					</th>
+                        
+				</tr>
+           
+
+				<tr>
+					<td class="BDJHeadline02" align="center">&nbsp;</td>
+					<td colspan="5" class="BDJNormalText06" align="left">
+						<strong>Adhunik Packages And Printers</strong>
+						<br>
+						 
+						<span class="BDJNormalText06">South Matuail, Jatrabari, Dhaka</span>
+						<br>
+						 
+					</td>
+				</tr>
+                
+                 
+                 <tr>
+                <td class="BDJHeadline02" align="center">&nbsp;</td>
+                    <td colspan="5" class="BDJNormalText06" align="left">
+                         <strong>Area of Expertise</strong>
+                         <br>
+						<span class="BDJNormalText06">
+                   Billing (0.5 yr),&nbsp;Office Management (0.5 yr),&nbsp;Sales & Marketing (0.2 yr)
+                   </span>
+				   <br>
+				   
+                   
+							<STRONG>Duties/Responsibilities</STRONG>
+							<br />
+							Bill making, Vouchers checking, Office Management, Daily record update, etc.
+
+						
+						<!-- <script>
+							$( document ).ready(function() {
+								if (readCookie('myBdjobsAriaExp') == "" || readCookie('myBdjobsAriaExp') == null) {
+									
+								}
+							});
+						</script> -->
+
+						
+						
+                    </td>
+                   </tr>
+                
+                
+			 </table>	
+			
+	</table>
+    	
+<!----------------------
+'ACADEMIC QUALIFICATION:
+------------------------>
+
+	 <table border="0" cellpadding="0" style="margin-top:3px;" cellspacing="0" align="center" width="750">
+	 	 <tr>
+		 <td colspan="6" class="BDJHeadline01"><U>Academic Qualification:</U></td>
+		 </tr>
+	
+		 <tr>
+		 <td colspan="6" align="left" style="padding-left:5px;" class="BDJNormalText01">
+		 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="border:1px solid #666666;word-break: break-word;">
+		 	  <tr class="BDJNormalText02">
+			  <td width="20%" align="center" style="border-right:1px solid #666666"><STRONG>Exam Title</STRONG></td>
+			  <td width="15%" align="center" style="border-right:1px solid #666666"><STRONG>Concentration / Major</STRONG></td>
+			  <td width="15%" align="center" style="border-right:1px solid #666666"><STRONG>Institute</STRONG></td>
+			  <td width="12.5%" align="center" style="border-right:1px solid #666666"><STRONG>Result</STRONG></td>			  
+			       <td width="12.5%" align="center" style="border-right:1px solid #666666"><STRONG>Passing Year</STRONG></td>		   
+			       <td width="10%" align="center" style="border-right:1px solid #666666"><STRONG>Duration</STRONG></td>
+				   <td width="15%" align="center"><STRONG>Achievement</STRONG></td>			  
+			  </tr>			 
+		      
+ <tr class="BDJNormalText02">
+					<!--Exam Title:-->
+				    <td width="20%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+				<b>	Diploma in Database Design and Development </b>
+					&nbsp;
+					</td>
+				    <!--Concentration/Major:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Database
+					&nbsp;
+					</td>
+				    <!--Institute:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					IsDB-BISEW	
+					&nbsp;				
+					</td>
+				    <!--Result:-->
+					<td width="12.5%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Awarded
+					&nbsp;					
+					</td>
+				    <!--Passing Year:-->
+					
+						 <td width="12.5%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+					     2022
+						 &nbsp;
+					     </td>
+					
+											
+						 <!--Duration:-->
+						 <td width="10%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+						 1.5 Year	
+						 &nbsp;				
+						</td>
+						<!--Achievement:-->
+						<td "15%" style="border-top:1px solid #666666;" align="center">
+						-
+						&nbsp;					
+						</td>
+						</tr>
+
+
+			        <tr class="BDJNormalText02">
+					<!--Exam Title:-->
+				    <td width="20%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Kamil (Madrasah)
+					&nbsp;
+					</td>
+				    <!--Concentration/Major:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Hadith
+					&nbsp;
+					</td>
+				    <!--Institute:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Maloncha Al Amin Jamiria Kamil Madrasah	
+					&nbsp;				
+					</td>
+				    <!--Result:-->
+					<td width="12.5%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Appeared
+					&nbsp;					
+					</td>
+				    <!--Passing Year:-->
+					
+						 <td width="12.5%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+					     2022
+						 &nbsp;
+					     </td>
+					
+											
+						 <!--Duration:-->
+						 <td width="10%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+						 2 Years	
+						 &nbsp;				
+						</td>
+						<!--Achievement:-->
+						<td "15%" style="border-top:1px solid #666666;" align="center">
+						-
+						&nbsp;					
+						</td>
+						</tr>
+				   
+			        <tr class="BDJNormalText02">
+					<!--Exam Title:-->
+				    <td width="20%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Fazil (Madrasah)
+					&nbsp;
+					</td>
+				    <!--Concentration/Major:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Islamic Studies
+					&nbsp;
+					</td>
+				    <!--Institute:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					PAILA BANIABARI FAZIL MADRASAH	
+					&nbsp;				
+					</td>
+				    <!--Result:-->
+					<td width="12.5%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					CGPA:3.17<br/>out of 5
+					&nbsp;					
+					</td>
+				    <!--Passing Year:-->
+					
+						 <td width="12.5%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+					     2017
+						 &nbsp;
+					     </td>
+					
+											
+						 <!--Duration:-->
+						 <td width="10%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+						 3	
+						 &nbsp;				
+						</td>
+						<!--Achievement:-->
+						<td "15%" style="border-top:1px solid #666666;" align="center">
+						-
+						&nbsp;					
+						</td>
+						</tr>
+				   
+			       
+				   
+			        <tr class="BDJNormalText02">
+					<!--Exam Title:-->
+				    <td width="20%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Alim (Madrasah)
+					&nbsp;
+					</td>
+				    <!--Concentration/Major:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					General
+					&nbsp;
+					</td>
+				    <!--Institute:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					PAILA BANIABARI FAZIL MADRASAH	
+					&nbsp;				
+					</td>
+				    <!--Result:-->
+					<td width="12.5%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					CGPA:4.25<br/>out of 5
+					&nbsp;					
+					</td>
+				    <!--Passing Year:-->
+					
+						 <td width="12.5%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+					     2014
+						 &nbsp;
+					     </td>
+					
+											
+						 <!--Duration:-->
+						 <td width="10%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+						 2	
+						 &nbsp;				
+						</td>
+						<!--Achievement:-->
+						<td "15%" style="border-top:1px solid #666666;" align="center">
+						-
+						&nbsp;					
+						</td>
+						</tr>
+				   
+			        <tr class="BDJNormalText02">
+					<!--Exam Title:-->
+				    <td width="20%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					Dakhil (Madrasah)
+					&nbsp;
+					</td>
+				    <!--Concentration/Major:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					General
+					&nbsp;
+					</td>
+				    <!--Institute:-->
+					<td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					PAILA BANIABARI FAZIL MADRASAH	
+					&nbsp;				
+					</td>
+				    <!--Result:-->
+					<td width="12.5%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+					CGPA:4.56<br/>out of 5
+					&nbsp;					
+					</td>
+				    <!--Passing Year:-->
+					
+						 <td width="12.5%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+					     2012
+						 &nbsp;
+					     </td>
+					
+											
+						 <!--Duration:-->
+						 <td width="10%" style="border-right:1px solid #666666;border-top:1px solid #666666;" align="center">
+						 2	
+						 &nbsp;				
+						</td>
+						<!--Achievement:-->
+						<td "15%" style="border-top:1px solid #666666;" align="center">
+						-
+						&nbsp;					
+						</td>
+						</tr>
+				   		 
+		 </table> 
+		 </td>
+		 </tr>
+	 </table>
+
+<!--------
+TRAINING:
+--------->
+<!-------------------------------
+Bdjobs-AMCAT Certification Test
+
+-------------------------------->
+
+<table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+	 <tr>
+	 <td colspan="6" class="BDJHeadline01"><U>Training Summary:</U></td>
+	 </tr>
+
+	 <tr>
+	 <td colspan="6" align="left" style="padding-left:5px;" class="BDJNormalText01">
+	 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="border:1px solid #666666; word-break: break-word;">
+	 	 <tr class="BDJNormalText02">
+		 <td width="19%" align="center" style="border-right:1px solid #666666"><STRONG>Training Title</STRONG></td>
+		 <td width="19%" align="center" style="border-right:1px solid #666666"><STRONG>Topic</STRONG></td>
+		 <td width="15%" align="center" style="border-right:1px solid #666666"><STRONG>Institute</STRONG></td>
+		 <td width="15%" align="center" style="border-right:1px solid #666666"><STRONG>Country</STRONG></td>
+		 <td width="15%" align="center" style="border-right:1px solid #666666"><STRONG>Location</STRONG></td>
+		 <td width="2%" align="center" style="border-right:1px solid #666666"><STRONG>Year</STRONG></td>
+		 <td width="15%" align="center"><STRONG>Duration</STRONG></td>
+		 </tr>
+		 
+			   <tr class="BDJNormalText02">
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Database Design and Development
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;">
+			   SQL, PLSQL, Oracle Application Express Development
+			   &nbsp;			   
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   IsDB-BISEW (COGENT)
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Bangladesh
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Dhaka, Bangladesh
+			   &nbsp;
+			   </td>
+			   <td width="10%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   2021
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-top:1px solid #666666;">
+			   14 Month
+			   &nbsp;
+			   </td>
+			   </tr>
+		 
+			   <tr class="BDJNormalText02">
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Digital Security Essentials
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;">
+			   Cyber Security
+			   &nbsp;			   
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   muktopaath.gov.bd
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Bangladesh
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Online
+			   &nbsp;
+			   </td>
+			   <td width="10%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   2020
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-top:1px solid #666666;">
+			   4 Weeks
+			   &nbsp;
+			   </td>
+			   </tr>
+		 
+			   <tr class="BDJNormalText02">
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Microsoft Basics Excel
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666; padding-left:1px;">
+			   Excel
+			   &nbsp;			   
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   muktopaath.gov.bd
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Bangladesh
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   Dhaka
+			   &nbsp;
+			   </td>
+			   <td width="10%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+			   2020
+			   &nbsp;
+			   </td>
+			   <td width="15%" align="center" style="border-top:1px solid #666666;">
+			   1 Month
+			   &nbsp;
+			   </td>
+			   </tr>
+		 
+	 </table>
+	 </td>
+	 </tr>
+	 </table>
+
+
+<!--------------------------
+PROFESSIONAL QUALIFICATION:
+--------------------------->
+
+	 <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+	 	 <tr>
+		 <td colspan="6" class="BDJHeadline01"><U>Professional Qualification:</U></td>
+		 </tr>
+	
+		 <tr>
+		 <td colspan="6" align="left" style="padding-left:5px;" class="BDJNormalText01">
+		 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="border:1px solid #666666;word-break: break-word;">
+			 <tr class="BDJNormalText02">
+			 <td width="25%" align="center" style="border-right:1px solid #666666"><STRONG>Certification</STRONG></td>
+			 <td width="25%" align="center" style="border-right:1px solid #666666"><STRONG>Institute</STRONG></td>
+			 <td width="25%" align="center" style="border-right:1px solid #666666"><STRONG>Location</STRONG></td>
+			 <td width="12.5%" align="center" style="border-right:1px solid #666666"><STRONG>From</STRONG></td>
+			 <td width="12.5%" align="center"><STRONG>To</STRONG></td>
+			 </tr>
+			 	
+				  <tr class="BDJNormalText02">
+				  <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+				  Modern Wordpress Websites 2022 | Elementor & Adobe Photoshop
+				  &nbsp;
+				  </td>
+				  <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+				  udemy.com
+				   &nbsp;
+				  </td>
+				  <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+				  Online
+				   &nbsp;
+				  </td>
+				  <td width="12.5%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">
+				   September 1, 2020
+				   &nbsp;	   
+				  </td>
+				  <td width="12.5%" style="border-top:1px solid #666666;" align="center">
+				   February 12, 2021
+				   &nbsp;	   
+				  </td>
+				  </tr>
+			 
+		 </table>	
+		 </td>
+		 </tr>
+	 </table>
+	
+<!---------------------------------
+CAREER AND APPLICATION INFORMATION:
+----------------------------------->
+
+	 <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+		<!--
+		Career and Application Information:
+		-->
+		<tr>
+		<td colspan="6" class="BDJHeadline01"><U>Career and Application Information:</U></td>
+		</tr>
+	
+		<tr>
+		<td colspan="6" align="left" class="BDJNormalText01">
+		<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+			<!--Looking For:-->
+			
+				 <tr class="BDJNormalText03">
+				 <td width="32%" align="left" style="padding-left:5px;">Looking For</td>
+				 <td width="2%" align="center">:</td>
+				 <td width="66%" align="left">
+				 Mid Level Job
+				 </td>
+				 </tr>
+			
+			<!--Available For:-->
+			
+				 <tr class="BDJNormalText03">
+				 <td width="32%" align="left" style="padding-left:5px;">Available  For</td>
+				 <td width="2%" align="center">:</td>
+				 <td width="66%" align="left">
+				 Full Time
+				 </td>
+				 </tr>
+			
+			<!--Present Salary:-->
+			
+			<!--Expected Salary:-->
+
+					  <tr class="BDJNormalText03">
+					  <td width="32%" align="left" style="padding-left:5px;">Expected Salary</td>
+					  <td width="2%" align="center">:</td>
+					  <td width="66%" align="left">Tk. 35000</td>
+					  </tr>
+
+			<!--Preferred Job Category:-->
+			<tr class="BDJNormalText03">
+			<td width="32%" align="left" style="padding-left:5px;">Preferred  Job Category</td>
+			<td width="2%" align="center">:</td>
+			<td width="66%" align="left"> Software Company, 
+			Bank/Non-Bank Fin. Institution, Education/Training, IT/Telecommunication.
+			</td>
+			</tr>
+			<!--Preferred District:-->
+            
+			<tr class="BDJNormalText03">
+			<td width="32%" align="left" style="padding-left:5px;">Preferred  District </td>
+			<td width="2%" align="center">:</td>
+			<td width="66%" align="left">
+			Chattogram, Cumilla, Dhaka, Gazipur, Khulna, Mymensingh, Narayanganj, Rajshahi, Rangpur, Sylhet, Tangail			
+			</td>
+			</tr>
+             
+			<!--Preferred Country:-->
+			 			
+					 <tr class="BDJNormalText03">
+					 <td width="32%" align="left" style="padding-left:5px;">Preferred  Country </td>
+					 <td width="2%" align="center">:</td>
+					 <td width="66%" align="left">
+					 Australia, Canada, India, Italy, Poland, Portugal, Saudi Arabia, Spain, Sweden, United States							
+					 </td>
+					 </tr>
+				 		
+			<!--Preferred Organization Types:-->
+           
+			<tr class="BDJNormalText03">
+			<td width="32%" align="left" style="padding-left:5px;" valign="top">Preferred  Organization Types</td>
+			<td width="2%" align="center" valign="top">:</td>
+			<td width="66%" align="left">
+			Banks, Telecommunication, Manufacturing (Light Engineering & Heavy Industry), Training Institutes, Design/Printing/Publishing, Computer Hardware/Network Companies, Multinational Companies, Hotel, Travel Agent, Medical Equipment, Technical Infrastructure, Beverage
+			</td>
+			</tr>
+            
+		</table>
+		</td>
+		</tr>
+	</table>
+
+
+<!--
+Specialization:
+-->
+
+
+     <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+	 	<tr>
+		<td colspan="6" class="BDJHeadline01"><U>Specialization:</U></td>
+		</tr>
+				 
+		  	 <tr>
+			 <td colspan="6" align="left" style="padding-left:5px;" class="BDJNormalText01">
+			 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="border:1px solid #666666;word-break: break-word;">
+				<tr>
+				
+					 <td width="40%" class="BDJNormalText02" align="center" style="border-right:1px solid #666666;border-bottom:1px solid #666666;">
+					 <STRONG>Fields of Specialization</STRONG>
+					 </td>
+				
+				     <td width="60%" class="BDJNormalText02" align="center" style="border-bottom:1px solid #666666;">
+						  <STRONG>Description</STRONG>
+				  </td>
+			   </tr>
+				
+				<tr>
+				
+				     <td width="40%" align="left" class="BDJNormalText03"  style="border-right:1px solid #666666;">
+						  <ul><li> Hardware & Networking</li><li> MS Word/ Excel/ PowerPoint/ OneNote</li><li> Web Design</li><li> Oracle Database</li><li> Web Application Developer</li></ul><br> 
+						  &nbsp;
+				  </td>
+				
+				     <td width="60%" align="left" class="BDJNormalText03">
+						  I am an Expert in the Oracle apex application. Have expertise in Database Design, SQL, PL/SQL. Applications developed in Oracle APEX any Version.<BR><BR>My practical experience with Oracle:<BR>Oracle Forms and Reports Configurations and Application Development.<BR>Oracle Database 12C, 19C Configuration and Backup and Restore.<BR>Data Export & Import Utility.<BR>Charts & Graphs Report.<BR>Printable PDF reports Design.<BR>Classic & Interactive Reports.<BR>Html Reports (Printable)<BR>Create and Manage Functions and Procedures.<BR>Dynamic Action and  Process.<BR>Custom User (Authentication & Authorization)<BR>HTML, CSS, JavaScript.<BR><BR>Others Expertise:<BR>Server Configuration Windows and Linux.<BR>Computer Hardware Assemble and disassemble.<BR>Windows Operating system (W7/W8/W10)  installation and preparation for work.<BR>Linux Setup.<BR>Software Configuration.<BR>Proficiency in Microsoft Office Package Programs (Word, Excel, PowerPoint, etc.)<BR>Website Design and Development.<BR>Customize WordPress website.<BR>Problem Solving etc.<BR>
+						  &nbsp;
+				  </td>
+						  
+				</tr>		
+			 </table>	
+			 </td>
+			 </tr>
+		
+</table>
+
+<!--
+EXTRA CURRICULAR ACTIVITIES, LANGUAGE PROFICIENCY:
+-->
+
+<!--
+Language Proficiency:
+-->
+	
+	 <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+	 	 <tr>
+		 <td colspan="6" class="BDJHeadline01"><U>Language Proficiency:</U></td>
+		 </tr>
+	
+		 <tr>
+		 <td colspan="6" align="left" style="padding-left:5px;" class="BDJNormalText01">
+		 <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="border:1px solid #666666">
+		 	 <tr class="BDJNormalText02">
+			 <td width="25%" align="center" style="border-right:1px solid #666666"><STRONG>Language</STRONG></td>
+			 <td width="25%" align="center" style="border-right:1px solid #666666"><STRONG>Reading</STRONG></td>
+			 <td width="25%" align="center" style="border-right:1px solid #666666"><STRONG>Writing</STRONG></td>
+			 <td width="25%" align="center"><STRONG>Speaking</STRONG></td>
+			 </tr>
+			 
+				   <tr class="BDJNormalText02">
+				   <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">Bangla&nbsp;</td>
+				   <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">High&nbsp;</td>
+				   <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">High&nbsp;</td>
+				   <td width="25%" align="center" style="border-top:1px solid #666666;">High&nbsp;</td>
+				   </tr>
+			 
+				   <tr class="BDJNormalText02">
+				   <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">English&nbsp;</td>
+				   <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">Medium&nbsp;</td>
+				   <td width="25%" align="center" style="border-right:1px solid #666666;border-top:1px solid #666666;">Medium&nbsp;</td>
+				   <td width="25%" align="center" style="border-top:1px solid #666666;">Medium&nbsp;</td>
+				   </tr>
+			 
+		 </table>
+		 </td>
+		 </tr>
+	 </table>
+
+<!--
+PERSONAL DETAILS:
+-->
+
+	 <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+		<!--
+		Personal Details
+		-->
+		<tr>
+		<td colspan="6" class="BDJHeadline01"><U>Personal Details :</U></td>
+		</tr>
+	
+		<tr>
+		<td colspan="6" align="left" class="BDJNormalText01">
+		<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="word-break: break-word;">
+			<!--Fathers Name:-->
+			
+				 <tr class="BDJNormalText03">
+				 <td width="22%" align="left" style="padding-left:5px;">Father's Name </td>
+				 <td width="2%" align="center">:</td>
+				 <td width="76%" align="left">
+				 MD Ataur Rahman
+				 </td>
+				 </tr>
+			
+			<!--Mothers Name:-->
+			
+				 <tr class="BDJNormalText03">
+				 <td width="22%" align="left" style="padding-left:5px;">Mother's Name </td>
+				 <td width="2%" align="center">:</td>
+				 <td width="76%" align="left">
+				 Sawda
+				 </td>
+				 </tr>
+			
+			<!--Date of Birth:-->
+			<tr class="BDJNormalText03">
+			<td width="22%" align="left" style="padding-left:5px;">Date  of Birth</td>
+			<td width="2%" align="center">:</td>
+			<td width="76%" align="left">
+			 December 30, 1997	 
+			</td>
+			</tr>
+			<!--Gender:-->
+			<tr class="BDJNormalText03">
+			<td width="22%" align="left" style="padding-left:5px;">Gender</td>
+			<td width="2%" align="center">:</td>
+			<td width="76%" align="left">
+			Male
+			</td>
+			</tr>
+
+			<!--Height:-->
+			<tr class="BDJNormalText03">
+			<td width="22%" align="left" style="padding-left:5px;">Height (Meter)</td>
+			<td width="2%" align="center">:</td>
+			<td width="76%" align="left">
+			1.6
+			</td>
+			</tr>
+
+			<!--Weight:-->
+			<tr class="BDJNormalText03">
+			<td width="22%" align="left" style="padding-left:5px;">Weight (Kg)</td>
+			<td width="2%" align="center">:</td>
+			<td width="76%" align="left">
+			50
+			</td>
+			</tr>
+
+			
+			<!--Marital Status:-->
+			<tr class="BDJNormalText03">
+			<td width="22%" align="left" style="padding-left:5px;">Marital  Status </td>
+			<td width="2%" align="center">:</td>
+			<td width="76%" align="left">
+			Unmarried
+			</td>
+			</tr>
+			<!--Nationality:-->
+			<tr class="BDJNormalText03">
+			<td align="left" style="padding-left:5px;">Nationality</td>
+			<td align="center">:</td>
+			<td align="left">
+			Bangladeshi
+			</td>
+			</tr>
+            
+			<tr class="BDJNormalText03">
+			<td align="left" style="padding-left:5px;">National Id No.</td>
+			<td align="center">:</td>
+			<td align="left">
+			4203692415
+			</td>
+			</tr>
+            
+			<!--Religion:-->
+			
+				 <tr class="BDJNormalText03">
+				 <td align="left" style="padding-left:5px;">Religion</td>
+				 <td align="center">:</td>
+				 <td align="left">
+				 Islam
+				 </td>
+				 </tr>
+			
+			<!-- Passport No -->
+			
+			<!-- Passport Issue Date -->
+			
+			<!--Permanent Address:-->
+			
+				 <tr class="BDJNormalText03">
+				 <td align="left" style="padding-left:5px;">Permanent  Address</td>
+				 <td align="center">:</td>
+				 <td align="left">
+				 Baniabari, Mahmoodpur, Melandaha, Jamalpur 2013
+				 </td>
+				 </tr>
+			
+			<!--Current Location:-->
+			<tr class="BDJNormalText03">
+			<td align="left" style="padding-left:5px;">Current  Location</td>
+			<td align="center">:</td>
+			<td align="left">			
+			Dhaka			
+			</td>
+			</tr>
+
+			
+					<tr class="BDJNormalText03">
+						<td align="left" style="padding-left:5px;">Blood Group</td>
+						<td align="center">:</td>
+						<td align="left">
+						AB-
+						</td>
+					</tr>
+			
+
+
+		</table>
+		</td>
+		</tr>
+	</table>
+	
+<!--
+REFERENCE:
+-->
+
+	 <table border="0" cellpadding="0" cellspacing="0" align="center" width="750" style="margin-top:3px;">
+		<!--
+		Reference:
+		-->
+		<tr>
+		<td colspan="6" class="BDJHeadline01"><U>Reference (s):</U></td>
+		</tr>
+		
+		<tr>
+		<td colspan="6" align="left" class="BDJNormalText01">
+		<table border="0" width="100%" align="center" cellpadding="0" cellspacing="0" style="word-break: break-word;">
+			
+				<tr class="BDJNormalText03">
+				<td width="22%" align="left">&nbsp;</td>
+				<td width="2%" align="center">&nbsp;</td>			
+				<td width="35%" align="left" class="BDJBoldText01" style="border-right:1px solid #666666;"><U>Reference: 01</U></td>
+				<td width="41%" align="left" class="BDJBoldText01" style="padding-left:15px;"><U>Reference: 02</U></td>
+				</tr>
+			
+				  <!--Name:-->
+                   
+                      <tr class="BDJNormalText03">
+                    
+                      <td width="22%" align="left" style="padding-left:5px;">Name </td>
+                      <td width="2%" align="center">:</td>
+                      <td width="35%" align="left" style="border-right:1px solid #666666;">
+                      Belayet Hossain
+                      &nbsp;
+                      </td>
+                      
+                          <td width="41%" align="left" style="padding-left: 10px;">
+                          S.M. Saifuddin Shiblu
+                          </td>
+                        
+                      </tr>
+					
+				  <!--Organization:-->
+                   
+				  <tr class="BDJNormalText03">
+                  
+				  <td width="22%" align="left" style="padding-left:5px;">Organization</td>
+				  <td width="2%" align="center">:</td>
+				  <td width="35%" align="left" style="border-right:1px solid #666666;">
+				  Nabisco Biscuits And Bread Factory LTD
+				  &nbsp;
+				  </td>
+                  
+                      <td width="41%" align="left" style="padding-left: 10px;">
+                      Show & Tell Consulting Ltd IsDB-BISEW IT Scholarship Programme				  
+                      </td>
+                  
+				  </tr>
+                   
+				  <!--Designation:-->	 
+                  
+                      <tr class="BDJNormalText03">
+                     
+                      <td width="22%" align="left" style="padding-left:5px;">Designation</td>
+                      <td width="2%" align="center">:</td>
+                      <td width="35%" align="left" style="border-right:1px solid #666666;">
+                      Sr. Exicutive Custom and Vat
+                      &nbsp;
+                      </td>
+                      
+                              <td width="41%" align="left" style="padding-left: 10px;">
+                              Consultant				  
+                              </td>
+                     	
+                      </tr>
+                 
+				  <!--Address:-->
+                
+                      <tr class="BDJNormalText03">
+                      
+                      <td width="22%" align="left" style="padding-left:5px;">Address</td>
+                      <td width="2%" align="center">:</td>
+                      <td width="35%" align="left" style="border-right:1px solid #666666;">
+                      77, Shaheed Tajuddin Ahmed Sarani Tejgaon, Dhaka
+                      &nbsp;
+                      </td>
+                         
+                          <td width="41%" align="left" style="padding-left: 10px;">
+                          House 2/5A (3rd Fl), Road 5, Block A
+Lalmatia Housing Estate, Lalmatia
+Dhaka, 1207. Bangladesh				  
+                          </td>
+                       
+                      </tr>
+                 
+				  <!--Phone(Off):-->	
+                 
+                      <tr class="BDJNormalText03">
+                     
+                      <td width="22%" align="left" style="padding-left:5px;">Phone (Off.) </td>
+                      <td width="2%" align="center">:</td>
+                      <td width="35%" align="left" style="border-right:1px solid #666666;">
+                      
+                      &nbsp;
+                      </td>
+                      
+                          <td width="41%" align="left" style="padding-left: 10px;">
+                          +88 02 9132576				  
+                          </td>
+                       
+                      </tr>
+				   
+				  <!--Phone(Res):-->
+                   
+                      <tr class="BDJNormalText03">
+                      
+                      <td align="left" style="padding-left:5px;">Phone (Res.) </td>
+                      <td align="center">:</td>
+                      <td align="left" style="border-right:1px solid #666666;">
+                      
+                      &nbsp;
+                      </td>
+                      
+                          <td align="left" style="padding-left: 10px;">
+                          				  
+                          </td>
+                      
+                      </tr>
+                   
+				  <!--Mobile:-->
+                   
+                      <tr class="BDJNormalText03">
+                     
+                      <td align="left" style="padding-left:5px;">Mobile</td>
+                      <td align="center">:</td>
+                      <td align="left" style="border-right:1px solid #666666;">
+                      01913749929
+                      &nbsp;
+                      </td>
+                       
+                          <td align="left" style="padding-left: 10px;">
+                          01816246051				  
+                          </td>
+                     
+                      </tr>
+                  
+				  <!--E-Mail:-->
+                  	
+                      <tr class="BDJNormalText03">
+                      
+                      <td align="left" style="padding-left:5px;">E-Mail</td>
+                      <td align="center">:</td>
+                      <td align="left" style="border-right:1px solid #666666;">
+                      
+                      &nbsp;
+                      </td>
+                      
+                          <td align="left" style="padding-left: 10px;">
+                          shiblu@showtellconsulting.com				  
+                          </td>
+                      
+                      </tr>
+                  
+				  <!--Relation:-->
+                  
+                      <tr class="BDJNormalText03">
+                      
+                      <td align="left" style="padding-left:5px;">Relation</td>
+                      <td align="center">:</td>
+                      <td align="left" style="border-right:1px solid #666666;">
+                      Relative
+                      &nbsp;
+                      </td>
+                     
+                          <td align="left" style="padding-left: 10px;">
+                          Professional				  				  
+                          </td>
+						
+                      </tr>
+                  
+				  
+				  <tr class="BDJNormalText03">
+				  <td align="left">&nbsp;</td>
+				  <td align="center">&nbsp;</td>
+				  <td colspan="2" align="left">
+				  </td>
+				  </tr>
+				
+		</table>
+		</td>
+		</tr>
+	</table>
+
+<CENTER>
+<DIV id="divCopyRight" class="BDJCopyRight" style="border-top:1px solid #999999; width:750px;">
+	
+</DIV>
+</CENTER>
+
+        </div>
+
+        
+	  </div>
+    </div>
+</div>
+</div>
+     <form id="form" method="post" action="Resume_print_format.asp">
+       <input type="hidden" id="str_html" name="str_html" value="">
+       <input type="hidden" id="FullName" name="FullName" value="MD Shadiqur Rahman">
+       <input type="hidden" id="User_name" name="User_name" value="shadiq1297@gmail.com">
+
+	 </form> 
+	 
+	 <form id="form2" name="form2" method="post" action="https://mybdjobs.bdjobs.com/PDFBulider/resume_format_pdf_for_blue_clr.php"> 
+		<input type="hidden" name="MainCV_" id="MainCV_" value=""> 
+		<input type="hidden" id="FullName" name="FullName" value="MD Shadiqur Rahman">
+		<input type="hidden" id="User_name" name="User_name" value="shadiq1297@gmail.com">
+		<input type="hidden" id="resumeType" name="resumeType" value="1">
+	</form>
+
+ </div>
+</div>
+</div>
+        
+    <!--- END ADSEND ADVERTISEMENT AREA-->
+                  <!--- STAT FOOTER ADVERTISMENT-->
+ 
+   
+               
+ 
+
+                  
+               <!-- START FOOTER AD MOBILE-->
+
+
+
+<!-- Fat footer -->
+
+
+<!-- bdjobs Common footer english version Start  -------------------------------------------------------- -->
+
+<!---- NEW INLINE INCLUDE STYLE START  -->
+
+    
+
+
+
+
+<script>
+    $('.in-partners').click(function(){
+      $('.all-partners').slideToggle();
+      $(this).find('i').toggleClass('icon-angle-down icon-angle-up');
+      if ($(this).attr( 'aria-expanded') === 'true') {
+          $(this).attr( 'aria-expanded', 'false');
+      } else {
+          $(this).attr( 'aria-expanded', 'true');
+      }
+    });
+    $('.ot-partners').click(function(){
+      $('.oth-partners').slideToggle();
+      $(this).find('i').toggleClass('icon-angle-down icon-angle-up');
+      if ($(this).attr( 'aria-expanded') === 'true') {
+          $(this).attr( 'aria-expanded', 'false');
+      } else {
+          $(this).attr( 'aria-expanded', 'true');
+      }
+    });
+    
+    $('.adeal').click(function(){
+      $('.adeal-wrap').slideToggle();
+      $(this).find('i').toggleClass('icon-angle-down icon-angle-up');
+      if ($(this).attr( 'aria-expanded') === 'true') {
+          $(this).attr( 'aria-expanded', 'false');
+      } else {
+          $(this).attr( 'aria-expanded', 'true');
+      }
+    });
+    </script>
+
+
+<!-- bdjobs Common footer english version END  -------------------------------------------------------- -->
+
+ <!-- cdnSSL_bdjobsdotCom 1230 line  --> <!-- cdnSSL_bdjobsdotCom_CommonFooter 1231 line https://TUVR2K00-a.akamaihd.net -->
+<!-- Common Footer on bdjobs home END TARIQ 08 nov 2021- 1241pm -->
+
+<style type="text/css">        
+    .warning-footer {
+            display: none;
+        }
+    @media only screen and (min-width:0px) and (max-width:767px) {
+        .warning-footer {
+            background-color: #eeeeee;
+            border-top: 2px solid #B71C1C;
+            bottom: 0;
+            margin: 0;
+            border-radius: 0;
+            padding: 5px 0px 5px 0px;
+            z-index: 1040;
+            left: 0px;
+            right: 0px;
+            display: block;
+            position: relative;
+        }
+        .warning-footer  .container {
+            margin-top: 0px;
+        }
+        .quit-btn {
+            font-size: 30px;
+            padding: 0;
+            background-color: transparent;
+            color: #5B5B5B;
+        }
+        .quit-btn {
+            position: absolute;
+            right: 10px;
+            top: -12px;
+        }
+        .msctxt {
+            margin: 0px 15px 0px 0px;
+        }
+        .msctxt span {
+            display: inline-block;
+            font-family: 'Inter', Noto Sans Bengali UI; 
+            font-size: 15px;
+        }
+        .msctxt span strong{
+            text-decoration: underline;
+        }
+    }      
+</style>
+
+<script>
+    function warningQuit() {
+        $('.warning-footer').slideUp();
+    }
+</script>
+
+<!-- <div class="scroll-top-wrapper ">
+         <span class="scroll-top-inner">
+         <i class="glyphicon glyphicon-circle-arrow-up"></i>
+         </span>
+</div>		 -->
+
+
+
+
+
+
+
+<!-- Script for keyboard traping for drop-doen toggle -->
+<script>
+    
+
+        $(document).on('click', '.dropdown-toggle', function(){
+            let divId = $(this).parents('li').find('.dropdown-menu').attr("id");
+            if($(this).parents('li').hasClass('open')) {
+                trapTab(divId);
+            }
+        });
+
+        function trapTab(divId) {
+            console.log(divId);
+            var focusableElements = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, [tabindex], [contenteditable], iframe";
+            var elements = $("#" + divId).find("*").not(":hidden").filter(focusableElements);
+            //console.log(elements);
+            elements.get(0).focus();
+            $(window).on("keydown", function(e) {
+                if (e.which == 9 || e.which == 40 || e.which == 38) {
+                    var item = $(':focus');
+                    var index = elements.index(item);
+                    if (e.shiftKey) {
+                        if (index == 0) {
+                            elements.get(elements.length - 1).focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (index == (elements.length - 1)) {
+                            elements.get(0).focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
+        }
+    
+</script>
+<!-- End -->
+
+<script type="text/javascript" src="https://mybdjobs.bdjobs.com/js/new_js/edit-resume_LC.js"></script> 
+
+<script type="text/javascript"  src="https://mybdjobs.bdjobs.com/js/jquery-confirm.js"></script>
+<script type="text/javascript"  src="https://mybdjobs.bdjobs.com/js/custom_alert_popup.js"></script>
+
+<script type="text/javascript" src="https://mybdjobs.bdjobs.com/js/leftnavi.js"></script>
+<script>
+   $(document).ready(function () {
+      //Expand Menu Section
+      expandLastVisitedMenuSection("");
+   });
+</script>
+
+
+        <script type="text/javascript" src="/../js/main.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+		<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+			})
+
+			function setCookie(cname, cvalue, exdays) {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0;i < ca.length;i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+				}
+				return null;
+			}
+
+			$(document).on("click",".icon-close",function() {
+				setCookie("myBdjobsAriaExp", "1", 1)
+			});
+		</script>
+
+
+
+</body>
+</html>
+
